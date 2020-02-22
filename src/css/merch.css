@@ -1,0 +1,132 @@
+.Merch{
+/*  display:flex;
+  align-items:center;
+  justify-content: center;*/
+  /*height:100%;*/
+  position: relative;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  overflow: hidden;
+  width:70vw;
+  color:lightgrey;
+  margin:0 auto;
+  padding-bottom:100px;
+}
+.main-wrap-merch{
+	width:100%;
+	min-height: 300px;
+	margin:0 auto;
+	/*display:flex;
+	align-items:center;
+	justify-content: center;*/
+	background-color:rgba(255,255,255,0.8);
+	flex-wrap: wrap;
+	border-bottom:3px solid red;
+  }
+
+.main-wrap-merch img{
+	width:260px;
+	height:260px;
+}
+.button-wrap{
+	padding-top:275px;
+}
+.custom-butt{
+	border-radius: 50%;
+	width:19px;
+	height:19px;
+	border:2px solid black;
+	display: inline-block;
+	margin:4px 5px;
+	/*padding:4px 4px 2px 4px; */
+}
+.custom-butt div{
+	
+	width:15px;
+	height:15px;
+	border-radius: 50%;
+	margin:2px;
+}
+.click-back{
+	background-color: black;
+}
+.intro-wrap{
+	font-size:25px;
+	background-color: white;
+	padding:20px 25px;
+	color:teal;
+}
+.main-form-merch{
+	background-color: white;
+	width:100%;
+	border:1px solid grey;
+	margin:1.5% 0;
+}
+.main-form-merch .heading{
+	font-size: 20px;
+	color:grey;
+	padding:20px; 
+	display: block;
+}
+@media only screen and (max-width:8in){
+	.Merch{
+		width:97.5vw;
+	}
+}
+.flip {
+    backface-visibility:             hidden;
+        -moz-backface-visibility:    hidden;
+        -ms-backface-visibility:     hidden;
+        -o-backface-visibility:      hidden;
+        -webkit-backface-visibility: hidden;
+    /*height: 105px;*/
+    position: absolute;
+    left:0%;
+    right:0;
+    margin:autos;
+    transform-origin:             50% 50% 0px;
+        -moz-transform-origin:    50% 50% 0px;
+        -ms-transform-origin:     50% 50% 0px;
+        -o-transform-origin:      50% 50% 0px;
+        -webkit-transform-origin: 50% 50% 0px;
+    transition: all 1s;
+        -moz-transition:    all 1s;
+        -ms-transition:     all 1s;
+        -o-transition:      all 1s;
+        -webkit-transition: all 1s;
+    /*width: 300px;    */
+}
+
+#side-1 {
+    transform:             rotateY( 0deg );
+        -moz-transform:    rotateY( 0deg );
+        -ms-transform:     rotateY( 0deg );
+        -o-transform:      rotateY( 0deg );
+        -webkit-transform: rotateY( 0deg );
+}
+
+#side-2 {
+    transform:             rotateY( 180deg );
+        -moz-transform:    rotateY( 180deg );
+        -ms-transform:     rotateY( 180deg );
+        -o-transform:      rotateY( 180deg );
+        -webkit-transform: rotateY( 180deg );
+}
+
+.flip-side-1 {    
+    transform:             rotateY( 0deg ) !important;
+        -moz-transform:    rotateY( 0deg ) !important;
+        -ms-transform:     rotateY( 0deg ) !important;
+        -o-transform:      rotateY( 0deg ) !important;
+        -webkit-transform: rotateY( 0deg ) !important;
+}
+
+.flip-side-2 {
+    transform:             rotateY( 180deg ) !important;
+        -moz-transform:    rotateY( 180deg ) !important;
+        -ms-transform:     rotateY( 180deg ) !important;
+        -o-transform:      rotateY( 180deg ) !important;
+        -webkit-transform: rotateY( 180deg ) !important;
+}
+
+

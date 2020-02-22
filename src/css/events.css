@@ -1,0 +1,42 @@
+.Events{
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;	
+	height:100%;
+	transition:0.5s;
+
+}
+#Events{
+	position:relative;
+	overflow:hidden;
+	width:200vw;
+}
+#eventsCardCont{
+	/*background-color: white;*/
+	display:flex;
+	align-items:center;
+  	justify-content:space-around;
+  	flex-wrap: wrap;
+  	flex-direction:row;
+  	overflow-y:auto;
+  	width:100vw;
+	position:absolute;
+	top:0;
+	left:00vw;
+	padding-bottom:10vh !important;
+
+}
+#eventsCardDtls{
+	position:absolute;
+	top:0;
+	left:100vw;
+	padding-bottom: 10vh;
+	overflow-y:auto;
+}
+@media only screen and (max-width:10in){
+	#eventsCardCont{
+		/*overflow-y:scroll;*/
+	}
+}
+@media only screen and (min-width:7in) and (max-width:11in){
+	
+}

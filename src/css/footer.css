@@ -1,0 +1,41 @@
+@font-face {
+	font-family: "Open";
+	src: url("./Reduza_Infinity.ttf");
+  }
+  html{
+  font-family: "Open", sans-serif;
+  }
+.footer-wrapper{
+	position:fixed;
+	bottom:0;
+	left:0;
+	width:100vw;
+	height:10vh;
+	display:flex;
+	align-items:center;
+	justify-content: center;
+	/*background-color: rgba(0,0,0,0.5)*/
+}
+.fa {
+  
+  font-size: 17px;
+  width: 17px;
+  text-align: center;
+  text-decoration: none;
+  
+  
+  color:whitesmoke;
+ 
+}
+
+
+@media only screen and (max-width:8in){
+	.fa{
+	  padding: 7px;
+	  font-size: 14px;
+	  width: 14px;	
+	}
+	.footer-wrapper{
+		display: none;
+	}
+}

@@ -1,0 +1,174 @@
+@font-face {
+  font-family: "Open";
+  src: url("./Reduza_Infinity.ttf");
+}
+html{
+font-family: "Open", sans-serif;
+}
+.blockquote {
+    padding: 60px 80px 40px;
+    position: relative;
+}
+.blockquote p {
+    font-size: 35px;
+    font-weight: 700px;
+    text-align: center;
+    color: #cc0039;
+    text-shadow: #bf0024;
+}
+h2{
+  color: white;
+}
+i:hover{
+  cursor: pointer;
+}
+.tit{
+  color: white;
+}
+/*blockquote p::before {
+    content: "\f095"; 
+    font-family: FontAwesome;
+   display: inline-block;
+   padding-right: 6px;
+   vertical-align: middle;
+  font-size: 180px;
+ }*/
+
+
+.blockquote::after {
+    content: "";
+    top: 20px;
+    left: 50%;
+    margin-left: -100px;
+    position: absolute;
+    border-bottom: 3px solid #bf0024;
+    height: 3px;
+    width: 200px;
+    margin-top: -50px;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic);
+.otro-blockquote{
+  font-size: 1.4em;
+  width:60%;
+  margin:50px auto;
+  font-family:Open Sans;
+  font-style:italic;
+  color: #cc0039;
+  padding:1.2em 30px 1.2em 75px;
+  border-left:8px solid #78C0A8 ;
+  line-height:1.6;
+  position: relative;
+  background:#EDEDED;
+}
+
+.otro-blockquote::before{
+  font-family:Arial;
+  content: "\201C";
+  color:#78C0A8;
+  font-size:4em;
+  position: absolute;
+  left: 10px;
+  top:-10px;
+}
+
+.otro-blockquote::after{
+  content: '';
+}
+
+.otro-blockquote span{
+  display:block;
+  color:#cc0039;
+  font-style: normal;
+  font-weight: bold;
+  margin-top:1em;
+}
+
+html {
+	box-sizing: border-box;
+	
+  }
+  
+  *, *:before, *:after {
+	box-sizing: inherit;
+  }
+  
+  .column {
+	float: left;
+	width: 25%;
+	margin-bottom: 16px;
+	padding: 0 8px;
+	align-items: center;
+
+  }
+  
+  @media screen and (max-width: 650px) {
+	.column {
+	  width: 100%;
+	  
+	  align-items: center;
+
+  }
+  .blockquote {
+    padding: 0px;
+    position: relative;
+    padding-top: 10px;
+}
+img{
+height: 100px;
+width: 100px;
+}
+  }
+  
+  .card {
+	box-shadow: 0 4px 8px 0 #cc0039;
+	align-items: center;
+
+  }
+  
+  .container {
+	padding: 0 5px;
+	align-items: center;
+
+  }
+  .main{
+	 
+	  margin-top: 50px;
+  }
+  
+  .container::after, .row::after {
+	content: "";
+	clear: both;
+	display: table;
+	align-items: center;
+
+  }
+  
+  .title {
+	color: white;
+	font-size: 20px;
+  }
+  
+  .button {
+	border: none;
+	outline: 0;
+	display: inline-block;
+	padding: 8px;
+	color: white;
+	background-color: #000;
+	text-align: center;
+	cursor: pointer;
+	width: 100%;
+  }
+  
+  .button:hover {
+	background-color: #555;
+  }
+
+  img{
+    margin-top: 5px;
+    position: relative;
+border-radius: 50%;
+
+
+  }

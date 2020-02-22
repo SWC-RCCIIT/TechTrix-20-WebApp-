@@ -1,0 +1,54 @@
+@font-face {
+    font-family: "Open";
+    src: url("./Reduza_Infinity.ttf");
+	}
+html{
+	font-family: "Open", sans-serif;
+}
+.Basicwrap{
+	/*width:60vh;*/
+	margin-top:14.5vh;
+	height:85.5vh;
+	overflow-x:hidden;
+	overflow-y:auto;
+	position:relative;
+	padding-bottom:8vh;
+}
+.maintain-padding{
+	width:100vw;
+	height:15vh;
+	display: none;
+}
+.notify-wrap{
+	position:fixed;
+	left:0;
+	top:40%;
+}
+.notify-wrap div{
+	color:white;
+	background:orange;
+	padding:5px 7px;
+	transform:rotateZ(-90deg);
+	transform-origin: 0 0;
+	cursor:pointer;
+	border-radius:0 0px 7px 7px;
+	font-weight:bold;
+	font-size:15px;
+	transition:1s;
+}
+.notify-wrap div:hover{
+	/*padding:7px 7px;*/
+}
+@media only screen and (max-width:7in){
+	.Basicwrap{
+		height:89.5vh;
+		margin-top:11.5vh;
+		/*background-color: green;*/
+	}	
+	.notify-wrap{
+		display: none;
+	}
+	.maintain-padding{
+		display: block;
+	}
+}

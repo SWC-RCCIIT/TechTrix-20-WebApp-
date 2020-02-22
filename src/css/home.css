@@ -1,0 +1,90 @@
+.Home {
+  display:flex;
+  /*display: inline-flex;*/
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  overflow: hidden;
+  width: 100vw;
+  /*flex-direction: column;*/
+}
+
+.HomeTTLogo {
+  /*background-color: red;*/
+  text-align: center;
+  padding-top:15%;
+  padding-bottom: 25%;
+  overflow: hidden;
+}
+.wrap-nitdlogo {
+  display: flex;
+  /*height: 90px !important;*/
+  align-items: center;
+  justify-content: center;
+}
+.HomeTTLogo span {
+  color: white;
+  margin-left: 15px;
+  font-size: 26px;
+  vertical-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+.HomeTTLogoimg {
+  width:195px !important;
+  /*height: 180px !important;*/
+
+}
+.TTDate{
+  text-align:center;
+  
+  width:100%;
+  color: whitesmoke;
+  margin-bottom:5px;
+  font-weight: bolder;
+  font-size:20px;
+}
+.NITDText{
+  text-align:center;
+  
+  width:100%;
+  color:#cc0039;
+  /*margin-bottom: 20px;*/
+  font-weight: bolder;
+  font-size:17px;
+}
+.NitdLogoimg {
+  width: 70px;
+  height: 70px;
+  margin-top: 10px;
+  vertical-align: center;
+}
+#honda{
+  width:initial !important;
+}
+@media only screen and (max-width:8in){
+  .HomeTTLogo{
+    padding-top: 0;
+  }
+  .HomeTTLogoimg{
+    width:160px !important;
+    height:initial;    
+  }
+  .wrap-nitdlogo img{
+    height: 50px !important;
+    width: 50px !important;
+  }
+}
+
+#reach-us{
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: 1px solid white;
+}
+#reach-us:hover{
+  cursor: pointer;
+  border: 1px solid #cc0039;
+}

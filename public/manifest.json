@@ -1,0 +1,20 @@
+{
+  "short_name": "TT'20",
+  "name": "TT'2-",
+  "icons": [
+        {
+            "src": "/favicon/favicon.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/favicon/favicon.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+  ],
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "black",
+  "theme_color": "black"
+}

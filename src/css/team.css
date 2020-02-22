@@ -1,0 +1,130 @@
+@font-face {
+    font-family: "Open";
+    src: url("./Reduza_Infinity.ttf");
+	}
+html{
+	font-family: "Open", sans-serif;
+}
+.team{
+	width:80vw;
+	padding-top:10px;
+	padding-bottom:80px;
+	overflow:hidden;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	display:flex;
+	align-items: center;
+  	justify-content: center;
+  	flex-wrap:wrap;
+  	margin:0 auto;
+}
+.team-type{
+	width:230px;
+	height: 230px;
+	display:flex;
+	color:white !important;
+
+	font-size:17px;
+	flex-direction: column;
+	margin:10px 14px;
+	border-radius:50%;
+	padding-top:80px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	font-weight: bolder;
+	border:2px solid  #db615c;
+	background-color: rgba(0,0,0,0.5)
+/*background-image: linear-gradient(19deg, #db615c 0%, #DDD6F3 100%);*/
+
+}
+.team-type a{
+	outline: none !important;
+	text-decoration: none !important;
+	-moz-text-decoration:none !important;
+	margin-top:25px;
+	text-align:center;
+}
+.team .main-title{
+	color:white;
+	font-size:35px;
+	
+	text-align:center;
+	text-decoration: underline;
+	padding:15px;
+	margin: 20px;
+}
+.team .profiles-wrap{
+	display:flex;
+	align-items: center;
+  	justify-content: center;
+  	flex-wrap:wrap;	
+}
+/*css for profile.js*/
+.ProfileCard{
+	width:280px;
+	margin:20px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	overflow:hidden;
+	padding:0px 0px 0px 0%;
+	border-radius:6px;
+	/*box-shadow: 0 0 1px 1px lightgrey;*/
+	/*background-color: green;*/
+}
+.team-img-wrap{
+	width:100%;
+	height:130px;
+	background-color: rgba(255,255,255,0.8);
+	text-align:center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.team-img{
+	width:90px;
+	height:90px;
+	border-radius:50%;
+}
+.team-info-wrap{
+	background-color: white;
+	border-bottom: 5px solid red;
+	width:100%;
+	padding-bottom:20px;
+}
+.team-info-wrap .name{
+	font-size:26px;
+	padding:35px 0 35px 0;	
+	color:grey;	
+}
+.team-info-wrap .as{
+	font-size:23px;
+	padding:2px 0 29px 0;
+	color:grey;	
+}
+.team-info-wrap .contact{
+	display:flex;
+	justify-content:flex-start;
+	align-items: center;
+
+
+}
+.team-info-wrap .contact span{
+	margin:4px 12px;
+	color:red !important;
+}
+.cmnTeam{
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+@media only screen and  (max-width:7in){
+	.team{
+		padding-bottom: 0px;
+		width:100vw;
+	}
+	.main-tit{
+		font-size:22px;
+	}
+	.sub-tit{
+		font-size:18px;
+	}
+}	
