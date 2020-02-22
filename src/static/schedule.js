@@ -1,22 +1,23 @@
-import firebase from './firebase'
+// import firebase from './firebase'
 
-//robotics
-const roboref = firebase.database().ref();
-roboref.update(
-	{
-		"Verbose" : {
-			"fee" : 100,
-			"intro" : "Robo soccer confronts the sheer and intensified tryst of the football lovers with robomaniacs. The love for the game just got technically amplified with the circuits and steel fighting for the precious prize. Infiltrate your robot with the soccer skill, it just might be the striker you need.",
-			"intropoints" : [ "<b>Contact : </b> +91 72890 17595 (Ayush Pranav)" ],
-			"ps" : "",
-			"rules1" : [ "Each round will last for 2 minutes.", "Maximum participants per team = 3.", "Robots must be manually controlled.", "Bots should not use more than 12v power supply and only one supply for whole system. You cannot use parallel batteries for generating higher power.", "No bot can remain inactive for more than 1 min in arena exceeding which will result in disqualification. By in-activity we mean-not able to take open ball to opponent's half.", "If your bot is designed for capturing that ball then you can do so for not more than 5 sec. And interval between successive captures must be 10 secs.", "No physical intervention in the arena would be tolerated. This would lead to direct disqualification.", "Bots should be controlled be designated controller/manual switching and not by physical pushing or pulling.", "Any kind of weapon that are intentionally added to harm the opponent would not be accepted.", "1Dimensions of bot must follow below mentioned criteria-(30cm x 30cm x 15cm)", "Weight of bot is limited to 1kg + 0.2kg. Weight of external power source would not be considered in weight of bot.", "1Organisers are bound to disqualify any team breaking the rules." ],
-			"team" : 3,
-			"win" : "The team scoring the maximum goals in a round will win that round."
-		  }
+// //robotics
+// const roboref = firebase.database().ref();
+// roboref.update(
+// 	{
+// 		"Score It" : {
+// 			"fee" : 0,
+// 			"intro" : "test",
+// 			"intropoints" : ["test","test"],
+// 			"ps" : "",
+// 			"rules1" : [ "test"],
+// 			"team" : 0,
+// 			"win" : "",
+// 			"rules2" : ""
+// 		  },
 		  
 
-	}
-)
+// 	}
+// )
 
 
 const Db = {

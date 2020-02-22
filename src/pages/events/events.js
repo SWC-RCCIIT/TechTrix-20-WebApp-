@@ -48,15 +48,48 @@ class Events extends Component {
             "content" : ""
           }
           
-        }
+        },
+        imgLink : ''
       }; 
     }
   handler=(foo)=>{
         this.setState({
           title:foo.title,
           lin:foo.lin,
-          options:foo.options
+          options:foo.options,
+         
         })
+
+        if(foo.title=="ROBOTICS"){
+          this.setState({
+            imgLink : "./images/robotics.png"
+          })
+        }
+        if(foo.title=="CODING"){
+          this.setState({
+            imgLink : './images/coding.png'
+          })
+        }
+        if(foo.title=="GAMING"){
+          this.setState({
+            imgLink : "./images/gaming.png"
+          })
+        }
+        if(foo.title=="GEEKS"){
+          this.setState({
+            imgLink : "./images/geeks.png"
+          })
+        }
+        if(foo.title=="KALEIDOSCOPE"){
+          this.setState({
+            imgLink : "./images/kaleidoscope.png"
+          })
+        }
+        if(foo.title=="OutOfTheBox"){
+          this.setState({
+            imgLink : "./images/outofthebox.png"
+          })
+        }
     }
     
   handleQuery=(value)=>{
@@ -81,7 +114,7 @@ class Events extends Component {
     return(
       <div className="Events" id="Events">
         <div id="eventsCardCont" className="Events">
-          <EventsCard title={this.state.firdb.ROBOTICS.title} lin="/events/robotics" options={this.state.firdb.ROBOTICS.options} content={this.state.firdb.ROBOTICS.content} action={this.handler}/>
+          <EventsCard pic="./images/robotics.png" title={this.state.firdb.ROBOTICS.title} lin="/events/robotics" options={this.state.firdb.ROBOTICS.options} content={this.state.firdb.ROBOTICS.content} action={this.handler}/>
 
           <EventsCard title={this.state.firdb.CODING.title} lin="/events/coding" options={this.state.firdb.CODING.options} content={this.state.firdb.CODING.content} action={this.handler}/>
           <EventsCard title={this.state.firdb.GAMING.title} lin="/events/gaming" options={this.state.firdb.GAMING.options} content={this.state.firdb.GAMING.content} action={this.handler}/>
@@ -96,6 +129,7 @@ class Events extends Component {
             <EventsOptions2 title={this.state.title} 
                             lin={this.state.lin} 
                             options={this.state.options}
+                            pic={this.state.imgLink}
             />
         </div>
       </div>

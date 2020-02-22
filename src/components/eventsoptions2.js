@@ -29,11 +29,13 @@ class EventsOptions2 extends Component {
           event : ""
           
       };
+     
     }
 componentDidMount(){
   this.setState({
     event : this.props.title
   })
+  
   // console.log(this.state.event,"ee")
   // console.log(this.props.title,"ff")
   
@@ -48,6 +50,7 @@ handleObject(){
 }
   
   handleClick=(value) => {
+    console.log(this.props,"props")
       document.getElementById('Events').style.transform="translateX(00vw)"
       // this.props.action()
   }
@@ -55,7 +58,7 @@ handleObject(){
     var alloptions=this.props.options.map((item,index)=>{
           return(<div className="cont" key={index}>
             <EventsOptions options={item} type={this.props.title}
-            img="https://img.icons8.com/nolan/64/hover-car.png"
+            pic={this.props.pic}
             />
             </div>)
     })

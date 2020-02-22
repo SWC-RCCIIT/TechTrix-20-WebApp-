@@ -442,7 +442,7 @@ class OpenEvent extends Component {
           "win" : "",
           "rules2" : ""
         },
-        "Rainbow Six Seige" : {
+        "Score It" : {
           "fee" : 0,
           "intro" : "",
           "intropoints" : [],
@@ -452,6 +452,7 @@ class OpenEvent extends Component {
           "win" : "",
           "rules2" : ""
         },
+        
         
         
 
@@ -500,7 +501,13 @@ class OpenEvent extends Component {
       <div className="OpenEvent" style={sectionStyle}>
              <div className="title comOE">{this.props.params.id}</div>
              <div className="img-cont comOE">
-                <img src="https://img.icons8.com/nolan/64/robot-2.png" className="icon"/>
+               {this.state.category == "ROBOTICS" ?  <img src="./images/robotics.png" className="icon"/> : ''}
+
+               {this.state.category == "CODING" ?  <img src="./images/coding.png" className="icon"/> : ''}
+               {this.state.category == "GAMING" ?  <img src="./images/gaming.png" className="icon"/> : ''}
+               {this.state.category == "GEEKS" ?  <img src="./images/geeks.png" className="icon"/> : ''}
+               {this.state.category == "KALEIDOSCOPE" ?  <img src="./images/kaleidoscope.png" className="icon"/> : ''} 
+               {this.state.category == "OutOfTheBox" ?  <img src="./images/outofthebox.png" className="icon"/> : ''}              
               </div>
              <div className="intro comOE" dangerouslySetInnerHTML={{__html:bar.intro}}></div>
               {introoptions}
@@ -579,8 +586,9 @@ class OpenEvent extends Component {
   	this.fetchData()
     let str=this.props.location.pathname
     str=str.substring(str.lastIndexOf("/events/")+8,str.lastIndexOf("/"))
-    console.log(str,"str")
+ 
     this.setState({category:str})
+
   }
   
 }

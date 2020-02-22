@@ -48,7 +48,8 @@ class EventsCard extends Component {
                     <div id="expandButton">
                         
                     </div>
-                    <div className="expandable-div">{this.props.content ? this.props.content : 'Loading...'}</div>
+                    <div className="expandable-div">
+                      {this.props.content ? this.props.content : 'Loading...'}</div>
                   </div>
           </div>
         </div>
