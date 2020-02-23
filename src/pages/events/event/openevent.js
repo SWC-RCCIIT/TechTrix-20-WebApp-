@@ -478,9 +478,17 @@ class OpenEvent extends Component {
     var ps=null;
     if(bar.ps!==''){
       ps =<div className="rules" >
-                  <div>Problem Statement :</div>
+                  <div>Problem Statement </div>
                   <div dangerouslySetInnerHTML={{__html:bar.ps}}/>
           </div>
+    }
+    let teamSize = null;
+    if(bar.team!=null)
+    {
+        teamSize = <div className="rules" >
+        <div>Team Size:&nbsp;{bar.team}</div>
+        
+        </div>
     }
     var round1=null;
     var round2=null;
@@ -512,11 +520,9 @@ class OpenEvent extends Component {
              <div className="intro comOE" dangerouslySetInnerHTML={{__html:bar.intro}}></div>
               {introoptions}
               {ps}
+              {teamSize}
              <div className="rules">
-                  {bar.rules1.length ?
-                    <div>Rules :</div>
-                    :''
-                  }
+                  
                   {round1}
                   <div>
                    
@@ -529,14 +535,14 @@ class OpenEvent extends Component {
              </div>
              {this.props.params.id!=='PAINTBALL'&&this.props.params.id!=='BULL RIDE'?
                <div className="rules">
-                  <div>Registration Fee :</div>
+                  <div>Registration Fee </div>
                   <div className="fee"> <b>₹</b>  <span>{bar.fee}</span></div>
                </div>
                :''
             }
              { bar.win ?
                <div className="rules">
-                    <div>Criteria for victory :</div>
+                    <div>Criteria for victory </div>
                     <div>{bar.win}</div>
                </div>
                :''
