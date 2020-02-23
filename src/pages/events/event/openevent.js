@@ -461,6 +461,16 @@ class OpenEvent extends Component {
           "team" : 0,
           "win" : "",
           "rules2" : ""
+        },
+        "Code Relay" : {
+          "fee" : 0,
+          "intro" : "",
+          "intropoints" : [],
+          "ps" : "",
+          "rules1" : [ ],
+          "team" : 0,
+          "win" : "",
+          "rules2" : ""
         }
         
         
