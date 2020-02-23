@@ -27,7 +27,7 @@ class Events extends Component {
             "options" : [],
             "content" : ""
           },
-          "outofthebox" : {
+          "OutOfTheBox" : {
             "title" : "",
             "options" : [],
             "content" : ""
@@ -121,7 +121,7 @@ class Events extends Component {
           <EventsCard  title={this.state.firdb.GEEKS.title} lin="/events/geeks" options={this.state.firdb.GEEKS.options} content={this.state.firdb.GEEKS.content} action={this.handler}/>
 
           <EventsCard title={this.state.firdb.KALEIDOSCOPE.title} lin="/events/kaliedoscope" options={this.state.firdb.KALEIDOSCOPE.options} content={this.state.firdb.KALEIDOSCOPE.content} action={this.handler}/>
-          <EventsCard title={this.state.firdb.outofthebox.title} lin="/events/outofthebox" options={this.state.firdb.outofthebox.options} content={this.state.firdb.outofthebox.content} action={this.handler}/>
+          <EventsCard title={this.state.firdb.OutOfTheBox.title} lin="/events/outofthebox" options={this.state.firdb.OutOfTheBox.options} content={this.state.firdb.OutOfTheBox.content} action={this.handler}/>
  
 
         </div>

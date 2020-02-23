@@ -29,7 +29,7 @@ class OpenEvent extends Component {
           "win" : "",
           "rules2" : ""
         },
-        "BUGS FUNNY" : {
+        "Bugs Funny" : {
           "fee" : 0,
           "intro" : "",
           "intropoints" : [],
@@ -121,7 +121,7 @@ class OpenEvent extends Component {
           "win" : "",
           "rules2" : ""
         },
-        "LOGIA" : {
+        "Logia" : {
           "fee" : 0,
           "intro" : "",
           "intropoints" : [],
@@ -131,7 +131,7 @@ class OpenEvent extends Component {
           "win" : "",
           "rules2" : ""
         },
-        "MATHEMAGIC" : {
+        "Mathemagic" : {
           "fee" : 0,
           "intro" : "",
           "intropoints" : [],
@@ -181,7 +181,7 @@ class OpenEvent extends Component {
           "win" : "",
           "rules2" : ""
         },
-        "MINUTE TO WIN IT" : {
+        "Minute To Win It" : {
           "fee" : 0,
           "intro" : "",
           "intropoints" : [],
@@ -241,7 +241,7 @@ class OpenEvent extends Component {
           "win" : "",
           "rules2" : ""
         },
-        "Line Follower" : {
+        "Obedient Orbiter" : {
           "fee" : 0,
           "intro" : "",
           "intropoints" : [],
@@ -251,7 +251,7 @@ class OpenEvent extends Component {
           "win" : "",
           "rules2" : ""
         },
-        "SPELL BEE" : {
+        "Spell Bee" : {
           "fee" : 0,
           "intro" : "",
           "intropoints" : [],
@@ -261,7 +261,7 @@ class OpenEvent extends Component {
           "win" : "",
           "rules2" : ""
         },
-        "T-SHIRT PAINTING" : {
+        "T-shirt Painting" : {
           "fee" : 0,
           "intro" : "",
           "intropoints" : [],
@@ -332,7 +332,7 @@ class OpenEvent extends Component {
           "rules2" : ""
         },
 
-        "Line Following Race" : {
+        "Escape Velocity Autonomous" : {
           "fee" : 0,
           "intro" : "",
           "intropoints" : [],
@@ -452,6 +452,16 @@ class OpenEvent extends Component {
           "win" : "",
           "rules2" : ""
         },
+        "Rainbow Six Siege" : {
+          "fee" : 0,
+          "intro" : "",
+          "intropoints" : [],
+          "ps" : "",
+          "rules1" : [ ],
+          "team" : 0,
+          "win" : "",
+          "rules2" : ""
+        }
         
         
         
@@ -475,13 +485,7 @@ class OpenEvent extends Component {
                             <p key={index} dangerouslySetInnerHTML={{__html:item}}/>
               )
     })
-    var ps=null;
-    if(bar.ps!==''){
-      ps =<div className="rules" >
-                  <div>Problem Statement </div>
-                  <div dangerouslySetInnerHTML={{__html:bar.ps}}/>
-          </div>
-    }
+    
     let teamSize = null;
     if(bar.team!=null)
     {
@@ -519,7 +523,7 @@ class OpenEvent extends Component {
               </div>
              <div className="intro comOE" dangerouslySetInnerHTML={{__html:bar.intro}}></div>
               {introoptions}
-              {ps}
+             
               
              <div className="rules">
                   

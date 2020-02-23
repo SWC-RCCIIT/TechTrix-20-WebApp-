@@ -4,18 +4,22 @@
 // const roboref = firebase.database().ref();
 // roboref.update(
 // 	{
-// 		"Score It" : {
-// 			"fee" : 0,
-// 			"intro" : "test",
-// 			"intropoints" : ["test","test"],
-// 			"ps" : "",
-// 			"rules1" : [ "test"],
-// 			"team" : 0,
-// 			"win" : "",
-// 			"rules2" : ""
+// 		"Obedient Orbiter" : {
+// 			"fee" : "TBA",
+// 			"intro" : "",
+// 			"intropoints" : [ "<b>Contact : </b> " ],
+// 			"rules1" : [ "TBD" ],
+// 			"team" : 5,
+// 			"win" : "TBD"
 // 		  },
-		  
-
+// 		  "Escape Velocity Autonomous" : {
+// 			"fee" : "TBD",
+// 			"intro" : "",
+// 			"intropoints" : [ "<b>Contact : </b>" ],
+// 			"rules1" : [ "TBD" ],
+// 			"team" : 5,
+// 			"win" : "TBD"
+// 		  },
 // 	}
 // )
 
