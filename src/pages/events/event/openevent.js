@@ -520,7 +520,7 @@ class OpenEvent extends Component {
              <div className="intro comOE" dangerouslySetInnerHTML={{__html:bar.intro}}></div>
               {introoptions}
               {ps}
-              {teamSize}
+              
              <div className="rules">
                   
                   {round1}
@@ -533,6 +533,7 @@ class OpenEvent extends Component {
                   {options2}
 
              </div>
+             {teamSize}
              {this.props.params.id!=='PAINTBALL'&&this.props.params.id!=='BULL RIDE'?
                <div className="rules">
                   <div>Registration Fee </div>
