@@ -29,6 +29,8 @@ class NavBar extends Component {
                         // {tit:'Sponsors',linki:'/sponsors'},
 
                         {tit:'Our team',linki:'/contactus'},
+                        {tit:'Campus Ambassador',linki:'/ca'},
+
                         {tit:'Reach us',linki:'/reachus'}
 
 

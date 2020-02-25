@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import './Reach.css'
 import { Link } from 'react-router'
-
+import { hashHistory } from 'react-router'
+import firebase from '../../static/firebase'
 export class Reach extends Component {
 
 
@@ -20,12 +21,17 @@ export class Reach extends Component {
             this.setState( {[event.target.name] : event.target.value   })
           }
     
-       onSubmit = (e) => {
-           //console.log(this.state)
-           e.preventDefault();
-           
-           
-        }
+          onSubmit = (e) => {
+            //console.log(this.state)
+            e.preventDefault();
+             const campref = firebase.database().ref('reach-us');
+             campref.push(
+                 this.state
+             )
+ 
+            hashHistory.push('/registered');
+            
+         }
     
     render() {
         return (
@@ -74,9 +80,10 @@ export class Reach extends Component {
              name="message"
             />
         </div>
-        {this.state.name && this.state.email &&this.state.email ?   <Link to={{pathname :"/registered"}}>
-        <button class="btn" type="button" >Send</button>
-        </Link> :  <button class="btn" type="button" >Send</button>}
+        {this.state.name!='' && this.state.email!='' &&this.state.message!='' ?   
+        
+        <button onClick={this.onSubmit} class="btn" type="button" >Send</button>
+      :  <button  class="btn" type="button" >Send</button>}
       
     </form>
    

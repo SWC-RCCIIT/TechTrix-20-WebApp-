@@ -55,7 +55,7 @@ class Home extends Component {
 
          {this.state.show ? <ReactRotatingText
           color="#cc0033"
-           items={[ 'The Earth is the cradle of humanity,', 'but mankind cannot stay in the cradle forever.', 'Join us in our journey this year.','To Infinity & Beyond!']} /> : ''}
+           items={[ 'The Annual Techno-Management Fest of RCCIIT, Kolkata.', 'Prizes Worth Upto Rs. 3 Lakhs.']} /> : ''}
             
             
 			    </div>

@@ -25,7 +25,7 @@ import Registered from './pages/events/event/registered.js'
 import ErrorPage from './pages/events/event/errorpage.js'
 import Team from './pages/team/team.js'
 import OpenTeam from './pages/team/openteam.js'
-
+import campus from './pages/campus_amb/campus'
 import Contact from './pages/contact/contact.js'
 import Canvas from './components/canvas_2d.js'
 import Reach from './pages/Reach/Reach'
@@ -54,7 +54,8 @@ class App extends Component {
                            <Route path="/events/geeks/:id" component={OpenEvent}/>
                            <Route path="/reguser" component={RegUser}/>
                            <Route path="/events/kaleidoscope/:id" component={OpenEvent}/>
-
+                           <Route path="/ca" component={campus}/>
+                           
                            <Route path="/reachus" component={Reach}/>
                             
                            <Route path="/events/outofthebox/:id" component={OpenEvent}/>

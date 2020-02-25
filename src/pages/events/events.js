@@ -107,7 +107,7 @@ class Events extends Component {
     this.setState({
       firdb : snapshot.val()
     })      
-     console.log(this.state.firdb);
+    // console.log(this.state.firdb);
     // console.log("after",this.state)
   }
   render() {
