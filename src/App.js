@@ -31,6 +31,7 @@ import Canvas from './components/canvas_2d.js'
 import Reach from './pages/Reach/Reach'
 import Timeline from './pages/timeline/timeline.js'
 import RegUser from './components/RegUser'
+import openflagship from './components/openflagship';
 const styles={
   // backgroundImage:`url(${logo})`
 }
@@ -57,6 +58,7 @@ class App extends Component {
                            <Route path="/ca" component={campus}/>
                            
                            <Route path="/reachus" component={Reach}/>
+                           <Route path="/flagship/:id" component={openflagship}/>
                             
                            <Route path="/events/outofthebox/:id" component={OpenEvent}/>
 

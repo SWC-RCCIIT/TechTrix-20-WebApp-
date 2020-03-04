@@ -1,70 +1,50 @@
 import React, { Component } from 'react';
-import '../../css/sponsors.css';
-
-
+import Sponsor from '../../components/Sponsor'
+import firebase from '../../static/firebase'
 
 class Sponsors extends Component {
-      constructor(props) {
-      super(props);
-      this.state = {
-        open: false,
-      };
-    }
+	constructor(props) {
+		super(props);
+		this.state = {
+		  slideIndex: 0,
+		  prevIndex:0,
+		  sponsors : []
+		};
+	  }
+	  fetchSnapshot = async() => {
+		let rootRef = firebase.database().ref('sponsors');
+	
+		let snapshot = await rootRef.once("value");
+		this.setState({
+		  sponsors : snapshot.val()
+		})      
+	   console.log(this.state.sponsors,"mem");
+		// console.log("after",this.state)
+	  }
+	  componentDidMount(){
+		this.fetchSnapshot();
+	  }
   render() {
 	  return(
-	  <div>
-	  
-	  <div className="Absolute-Center">
-		  <h1 style={{color:"white"}}>To be upated soon</h1>
-		 <br/> 
-		 </div>
-		 
-	<center>	 <a target="_blank" href="https://bit.ly/Techtrix20Sponsorship" style={{color:"#cc0039"}} id="chere" >
-		<h2 style={{color:"#cc0039"}}>Click here to know more</h2></a>
-	</center>
-		 </div>)
-  	// const spo=[
-	// 	'pcm logo.png',
-	// 	'ETS-TOEFL-4C.jpg',
-	// 	'EDST Logo.png',
-	// 	'IBC Logo.png',
-	// 	'Canara-Bank-logo.png',
-	// ]
-  	// let	  spomap=spo.map(e=>{
-  	// 	  		return(
-  	// 	  			<img 
-    //     				src={require('../../static/'+e)} 
-    //     				className="co-sponsor-img" 
-    //     				alt={e}
-    //     			/>
-  	// 	  			)
-  	// 	  })
-  	// const part=[
-	// 	  {tit:'tata_hackathon.jpg',span:'Hackathon Partner'},
-  	// 	{tit:'fidelity-international-logo.png',span:'ML Challenge Partner'},
-  	// 	{tit:'ace academy logo.jpg',span:'Higher Education Partner'},
-  	// 	{tit:'NDT logo.png',span:'Media Partner'},
-    //   {tit:'smaaashlogo.jpg',span:'Recreation Partner'},
-  	// 	{tit:'wittyfeed logo.png',span:'Official outreach Partner'},
-  		
-  	// ]
-  	// let partmap=part.map(e=>{
-  	// 	return(
-  	// 			<div className="co-sponsors">
-	// 				<span>{e.span}</span><br/>
-	// 	        	<img 
-	// 	        		src={require('../../static/'+e.tit)} 
-	// 	        		className="co-sponsor-img" 
-	// 	        		alt={e.tit}
-	// 	        	/>
-  	// 			</div>
-  	// 		)
-  	// })
-    // return (
-	// 	<div id="gallery">
-		
-	//   </div>
-    // );
+		<div className="main">
+		<div clasclassNames="row">
+  
+		  {this.state.sponsors.map((res,key)=>{
+			return(
+			  <Sponsor
+			key={key}
+			name={res.title}
+			type = {res.info}
+			dp={res.logo}
+			web = {res.web}
+			/>
+			)
+		  })}
+   
+   
+  </div>
+		</div>
+	  )
   }
 }
 

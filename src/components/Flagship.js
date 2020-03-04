@@ -84,6 +84,7 @@ class Flagship extends Component {
 {this.state.flagship.map((val,key)=>{
   return(
     // <Link to={{pathname : "/reachus", query:{event:val.title}}}>
+    <Link to={'/flagship'+'/'+key}>
     <div className="EventsCard comEC" >
             
     <div className="layer1 comEC" id="layer2">
@@ -100,7 +101,8 @@ class Flagship extends Component {
     
     
   </div>
-  // </Link>
+  </Link>
+  
   );
 })}
           

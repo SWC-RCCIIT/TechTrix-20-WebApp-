@@ -17,7 +17,7 @@ class Particle {
 
 	genStars(vals) {
 		for (let i = 0; i < vals.count; i++) {
-			let size = Math.random()  + 0.3
+			let size = Math.random()  + 0.2
 			this.stars.push({
 				x: Math.random() * window.innerWidth,
 				y: Math.random() * window.innerHeight,
@@ -58,7 +58,7 @@ class Particle {
 
 	bubbleStar(mousePos, range) {
 		this.stars = this.stars.map(s => {
-			if (Math.sqrt(Math.pow(mousePos.x - s.x, 1) + Math.pow(mousePos.y - s.y, 2)) < range) {
+			if (Math.sqrt(Math.pow(mousePos.x - s.x, 1) + Math.pow(mousePos.y - s.y, 3)) < range) {
 				s.bubble = true
 			} else {
 				s.bubble = false
@@ -146,7 +146,7 @@ export default class backgroundCanvasComponent extends Component {
 		)
 
 		window.addEventListener('mousedown', e => {
-			this.Particle.newStars({ x: e.clientX, y: e.clientY }, 30)
+			this.Particle.newStars({ x: e.clientX, y: e.clientY }, 10)
 		})
 
 
@@ -160,7 +160,7 @@ export default class backgroundCanvasComponent extends Component {
 			this.refs.globe_canvas.width  = window.innerWidth;
 			this.refs.globe_canvas.height = window.innerHeight;
 			this.Particle.stars = []
-			this.Particle.genStars({ count: 200 })
+			this.Particle.genStars({ count: 100 })
 			const ctx = this.refs.globe_canvas.getContext('2d');	
 			ctx.fillStyle = '#000'
 			ctx.fillRect(0, 0, window.innerWidth, window.innerHeight)
@@ -175,7 +175,7 @@ export default class backgroundCanvasComponent extends Component {
 		this.Particle.draw(ctx)
 		this.Particle.removeExcess(900)
 
-		window.requestAnimationFrame(this.updateCanvas, 950 / 60)
+		window.requestAnimationFrame(this.updateCanvas, 550 / 60)
 	}
 
 	render() {

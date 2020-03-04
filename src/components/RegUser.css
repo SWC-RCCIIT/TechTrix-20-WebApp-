@@ -79,6 +79,9 @@
     color: black;
     cursor: pointer;
   }
+  .ttext{
+    color:  white;
+  }
   
   @-webkit-keyframes NO {
     from, to {

@@ -479,10 +479,32 @@ class OpenEvent extends Component {
         
         
 
-      }
+      },
+      user:null
 
   	};
   }
+  handleClick=()=>{
+    var provider = new firebase.auth.GoogleAuthProvider();
+
+    firebase.auth().signInWithPopup(provider).then(function(result) {
+      // This gives you a Google Access Token. You can use it to access the Google API.
+      var token = result.credential.accessToken;
+      // The signed-in user info.
+      var user = result.user;
+      // ...
+    }).catch(function(error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      // The email of the user's account used.
+      var email = error.email;
+      // The firebase.auth.AuthCredential type that was used.
+      var credential = error.credential;
+      // ...
+    });
+  }
+
   // var foo=Db.this.props.params.id
   render() {
 
@@ -519,6 +541,7 @@ class OpenEvent extends Component {
                        
                     </div>
     }
+
     return (
       <div className="OpenEvent" style={sectionStyle}>
              <div className="title comOE">{this.props.params.id}</div>
@@ -586,11 +609,68 @@ class OpenEvent extends Component {
                  </Link>
                 } */}
 
-                <p> Registration will be starting soon </p>
+
+                {/* // i need to change thi one */}
+                {/* {this.state.user ? 
+<Link to={{pathname:'/reguser',query:{event:this.props.params.id,category:this.state.category}}}>
+                
+                <RaisedButton 
+                      label="Register for this event" 
+
+                      primary={true} 
+                      style={style} 
+                    
+                      />
+                      </Link>
+                      
+                      : 
+                      <RaisedButton 
+                      label="General registration" 
+
+                      primary={true} 
+                      style={style} 
+                      onClick={this.handleClick}
+                      />
+                      } */}
+                   
+                      {
+                       /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream ?
+                       <Link to={{pathname:'/reguser',query:{event:this.props.params.id,category:this.state.category}}}>
+                
+                       <RaisedButton 
+                             label="Register for this event" 
+       
+                             primary={true} 
+                             style={style} 
+                           
+                             />
+                             </Link>:
+               <a id="regbtn" target="_blank" href="https://play.google.com/store/apps/details?id=com.orange.techtrix20">Register</a>
+               
+                      }
+                    
+
              </div>
              {/*<div>{this.state.data.title}</div>*/}
       </div>
     );
+  }
+
+  logout=()=>{
+    firebase.auth().signOut();
+  }
+
+  authListener=()=> {
+    firebase.auth().onAuthStateChanged((user) => {
+      console.log(user);
+      if (user) {
+        this.setState({ user });
+        localStorage.setItem('user', user.uid);
+      } else {
+        this.setState({ user: null });
+        localStorage.removeItem('user');
+      }
+    });
   }
   fetchData = async() => {
     let rootRef = firebase.database().ref();
@@ -603,7 +683,7 @@ class OpenEvent extends Component {
     // console.log("after",this.state)
   }
   componentDidMount(){
-
+    this.authListener();
   	this.fetchData()
     let str=this.props.location.pathname
     str=str.substring(str.lastIndexOf("/events/")+8,str.lastIndexOf("/"))

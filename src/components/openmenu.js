@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router'
-
+import firebase from '../static/firebase'
 import Clear from 'material-ui/svg-icons/content/clear'
 import Footer from './footermenu.js'
 // components imports
@@ -16,6 +16,32 @@ const style={
 }
 
 class OpenMenu extends Component {
+  constructor(props)
+  {
+    super(props);
+    this.state={
+      timeline : 0
+    }
+  }
+  
+  fetchSnapshot = async() => {
+    let rootRef = firebase.database().ref('userTrack');
+
+    let snapshot = await rootRef.once("value");
+
+   
+
+    this.setState({
+      timeline : snapshot.val()
+    })      
+
+  
+     console.log("after",this.state)
+  }
+  componentDidMount(){
+    this.fetchSnapshot();
+
+  }
   render() {
     var menuOptions =[ 
      
@@ -24,11 +50,13 @@ class OpenMenu extends Component {
       // {tit:'Schedule',linki:'/timeline'},
       {tit:'Flagship',linki:'/flagship'},
       // {tit:'Sponsors',linki:'/sponsors'},
-
-      {tit:'Our team',linki:'/contactus'},
+     
+     
       {tit:'Campus Ambassador',linki:'/ca'},
-
+      {tit:'Sponsors',linki:'/sponsors'},
+      {tit:'Our team',linki:'/contactus'},
       {tit:'Reach us',linki:'/reachus'}
+                        
                       ]
         menuOptions=menuOptions.map((item,index)=>{
             return(
@@ -51,6 +79,9 @@ class OpenMenu extends Component {
         <div id="second-child">
             
             {menuOptions}
+            {this.state.timeline ? <Link to="/timeline">
+                            <button onClick={closemenu} className="draww meett  navbutt">Schedule</button>
+                          </Link> : ''}
         </div>
         <Footer/>
       </div>

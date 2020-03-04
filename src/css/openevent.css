@@ -6,7 +6,11 @@
 	margin-bottom:7vh !important;
 	overflow: hidden;
 }
-
+#regbtn{
+	padding: 10px;
+	color: white;
+	background-color: #cc0039;
+}
 .OpenEvent .title{
 	color:black;
 	font-size:35px;

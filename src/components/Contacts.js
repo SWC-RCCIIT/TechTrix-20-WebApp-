@@ -18,7 +18,9 @@ export class Contacts extends Component {
               <center><img src="./images/loadingdp.jpg" alt="Jane" height="200px" width="200px"/></center>}
             
             <center>  <h2>{this.props.name ? this.props.name : 'Loading...'}</h2></center>
-              <p className="title" >{this.props.team? this.props.team: 'Loading...'}</p>
+            <br/>
+            <center>  <p className="title-team" ><u>{this.props.team? this.props.team: 'Loading...'}</u></p></center>
+            <br/>
              <center> <p className="tit" >{this.props.subteam? this.props.subteam: 'Loading...'}</p>
              </center>
               <p>
