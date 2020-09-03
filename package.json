@@ -16,7 +16,7 @@
     "react-sound": "^1.2.0",
     "react-swipeable-views": "^0.12.8",
     "react-touch": "^0.4.3",
-    "serve": "^6.4.9",
+    "serve": "^10.1.2",
     "simple-react-modal": "^0.5.1",
     "three": "^0.89.0",
     "tracking": "^1.1.3"
